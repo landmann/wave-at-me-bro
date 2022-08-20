@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import "./App.css";
 import contractAbi from "./utils/WavePortal.json";
 
-const CONTRACT_ADDRESS = "0x7bEa7FBB2316F99f9799c792Df5Db800a2b2Df3a";
+const CONTRACT_ADDRESS = "0xFABECAB1F554B4eFD0D3E399760665eD518056bC";
 const CONTRACT_ABI = contractAbi.abi;
 
 const App = () => {
@@ -86,6 +86,11 @@ const App = () => {
     try {
       const { ethereum } = window;
 
+      if (message.length <= 3) {
+        console.log("MESSAGE MUST BE GREATER THAN 3 CHARS");
+        return;
+      }
+
       if (ethereum) {
         setIsWaving(true);
         const wavePortalContract = getContractDetails();
@@ -95,7 +100,7 @@ const App = () => {
         console.log("Retrieved total wave count...", count.toNumber());
 
         const waveTxn = await wavePortalContract.wave(message, {
-          gasLimit: 30000,
+          gasLimit: 300000,
         });
         console.log("Mining...", waveTxn.hash);
         setMessage("");
@@ -110,9 +115,11 @@ const App = () => {
         setIsWaving(false);
       } else {
         console.log("Ethereum object doesn't exist!");
+        setIsWaving(false);
       }
     } catch (error) {
       console.log(error);
+      setIsWaving(false);
     }
   };
 
@@ -146,9 +153,6 @@ const App = () => {
     }
   };
 
-  /**
-   * Listen in for emitter events!
-   */
   useEffect(() => {
     checkIfWalletIsConnected();
     let wavePortalContract;
@@ -240,10 +244,12 @@ const App = () => {
           return (
             <div
               key={index}
+              className="connect-wallet-button box"
               style={{
-                backgroundColor: "OldLace",
+                borderRadius: "15px",
+                borderColor: "blue",
                 marginTop: "16px",
-                padding: "8px",
+                padding: "16px",
               }}
             >
               <div>Address: {wave.address}</div>
