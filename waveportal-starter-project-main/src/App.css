@@ -3,6 +3,7 @@
   justify-content: center;
   width: 100%;
   margin-top: 64px;
+  background-color: beige;
 }
 
 .dataContainer {
@@ -24,11 +25,59 @@
   margin-top: 16px;
 }
 
-.waveButton {
-  cursor: pointer;
+.counter {
+  text-align: center;
+  color: gray;
   margin-top: 16px;
-  padding: 8px;
+  font-size: 28px;
+}
+
+.connected-container input[type="text"] {
+  display: inline-block;
+  color: black;
+  padding: 10px;
+  width: 50%;
+  height: 50px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
+.connected-container button {
+  height: 45px;
+}
+
+.cta-button {
+  height: 45px;
   border: 0;
-  border-radius: 5px;
-  
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.connect-wallet-button {
+  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+.submit-gif-button {
+  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-left: 10px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 0.5; /* Firefox */
 }
