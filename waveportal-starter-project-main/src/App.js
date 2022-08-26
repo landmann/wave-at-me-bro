@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import "./App.css";
 import contractAbi from "./utils/WavePortal.json";
+import OpenApp from "react-open-app";
 
 const CONTRACT_ADDRESS = "0xFABECAB1F554B4eFD0D3E399760665eD518056bC";
 const CONTRACT_ABI = contractAbi.abi;
@@ -193,6 +194,8 @@ const App = () => {
               {navigator.userAgent.includes("Instagram") &&
                 "YOU ARE ON INSTAGRAM!"}
             </div>
+            <OpenApp href="https://twitter.com/enzo_ferey">Twitter</OpenApp>
+            <OpenApp href={window.location.href}>Website</OpenApp>
           </div>
         </div>
 

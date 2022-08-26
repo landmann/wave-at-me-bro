@@ -9250,6 +9250,14 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
+"react-open-app@^1.0.3":
+  "integrity" "sha512-PuWsGp/egwZJOYWkfzru3WObHW1rzz4KSt8eAy42m5dMCEIJY25Zebfh70W8Wo85TkrzY5AwmZJU/N2KB7cSYA=="
+  "resolved" "https://registry.npmjs.org/react-open-app/-/react-open-app-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "babel-runtime" "^6.26.0"
+    "url-to-deep-link" "^1.0.3"
+
 "react-scripts@3.2.0":
   "integrity" "sha512-6LzuKbE2B4eFQG6i1FnTScn9HDcWBfXXnOwW9xKFPJ/E3rK8i1ufbOZ0ocKyRPxJAKdN7iqg3i7lt0+oxkSVOA=="
   "resolved" "https://registry.npmjs.org/react-scripts/-/react-scripts-3.2.0.tgz"
@@ -10967,6 +10975,13 @@
   dependencies:
     "querystringify" "^2.1.1"
     "requires-port" "^1.0.0"
+
+"url-to-deep-link@^1.0.3":
+  "integrity" "sha512-iW8Qbm1DOuqwmhdRizPwWLmeYMalRUQPJxxxHTLpiwNeAP8IIrujsN2R/PeFYe//AzeMnXFpr3ExdzglOXj5zg=="
+  "resolved" "https://registry.npmjs.org/url-to-deep-link/-/url-to-deep-link-1.0.7.tgz"
+  "version" "1.0.7"
+  dependencies:
+    "babel-runtime" "^6.26.0"
 
 "url@^0.11.0":
   "integrity" "sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE="
