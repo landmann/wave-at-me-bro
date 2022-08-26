@@ -188,7 +188,7 @@ const App = () => {
         <div className="header">
           <span>🛩</span> Welcome General!
           <div>
-            <a href={window.location.href} target="_blank" download>
+            <a href={window.location.href} target="_blank">
               Open in browser
             </a>
           </div>
