@@ -154,6 +154,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    console.log("USER", navigator.userAgent);
     checkIfWalletIsConnected();
     let wavePortalContract;
 
@@ -186,6 +187,11 @@ const App = () => {
       <div className="dataContainer">
         <div className="header">
           <span>🛩</span> Welcome General!
+          <div>
+            <a href={window.location.href} target="_blank" download>
+              Open in browser
+            </a>
+          </div>
         </div>
 
         <div className="bio">
