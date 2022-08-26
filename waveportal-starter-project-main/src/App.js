@@ -188,9 +188,11 @@ const App = () => {
         <div className="header">
           <span>🛩</span> Welcome General!
           <div>
-            <a href={window.location.href} target="_blank">
-              Open in browser
-            </a>
+            {navigator.userAgent}
+            <div>
+              {navigator.userAgent.includes("Instagram") &&
+                "YOU ARE ON INSTAGRAM!"}
+            </div>
           </div>
         </div>
 
